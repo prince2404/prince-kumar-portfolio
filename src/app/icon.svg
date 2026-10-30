@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="512" height="512" fill="none" stroke-linecap="round" stroke-linejoin="round">
+  <!-- Why: dark fill + cobalt frame keeps the logo clear on both light and dark backgrounds (menu, browser tab) -->
+  <rect x="10" y="16" width="80" height="68" rx="16" fill="#0a1020" stroke="#1558C9" stroke-width="7"/>
+  <!-- Lime arrow: the main accent color -->
+  <polyline points="29,38 46,52 29,66" stroke="#D4FF24" stroke-width="8"/>
+  <!-- White cursor line -->
+  <line x1="54" y1="68" x2="73" y2="68" stroke="#F2F5F7" stroke-width="8"/>
+</svg>

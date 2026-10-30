@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-midnight: #030407;
+  --color-surface: #070B14;
+  --color-cobalt: #1558C9;
+  --color-lime: #D4FF24;
+  --color-text-main: #F2F5F7;
+  /* #94A3B8 achieves 7.85:1 contrast ratio on #030407 for WCAG AA readability */
+  --color-text-muted: #94A3B8;
+
+  /* Fluid typography scales smoothly from 360px mobile to 1920px+ ultrawide */
+  --step-hero: clamp(2.15rem, 4vw + 1rem, 4rem);
+  --step-h2: clamp(1.5rem, 2.2vw + 0.75rem, 2.25rem);
+  --step-h3: clamp(1.15rem, 1.1vw + 0.75rem, 1.4rem);
+  --step-body: clamp(0.95rem, 0.35vw + 0.85rem, 1.075rem);
+  --step-meta: clamp(0.8rem, 0.2vw + 0.75rem, 0.9rem);
+}
+
+html {
+  background-color: var(--color-midnight);
+  color: var(--color-text-main);
+  scroll-behavior: smooth;
+  /* Prevents horizontal layout jump when page scroll is locked by the enlarged photo viewer */
+  scrollbar-gutter: stable;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--color-midnight);
+  color: var(--color-text-main);
+  font-size: var(--step-body);
+  line-height: 1.65;
+  overflow-x: hidden;
+}
+
+::selection {
+  background-color: var(--color-lime);
+  color: var(--color-midnight);
+}
+
+/* Visible keyboard focus ring using Acid Lime for WCAG 2.4.7 compliance */
+:focus-visible {
+  outline: 2px solid var(--color-lime);
+  outline-offset: 3px;
+}
+
+/* Subtle architectural grid background built in pure CSS (zero network payload) */
+.bg-system-grid {
+  background-size: 48px 48px;
+  background-image: 
+    linear-gradient(to right, rgba(21, 88, 201, 0.1) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(21, 88, 201, 0.1) 1px, transparent 1px);
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera in sticky nav */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Respect user motion preferences automatically */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
