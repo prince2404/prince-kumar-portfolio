@@ -19,7 +19,7 @@ const plusJakarta = Plus_Jakarta_Sans({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://princekumar.dev"), // Replace with your production domain
+  metadataBase: new URL("https://prince-kumar-portfolio-five.vercel.app"), // Replace with your production domain
   title: "Prince Kumar | Java Backend Developer",
   description:
     "Portfolio of Prince Kumar, a Java Backend Developer skilled in Spring Boot and SQL.",
@@ -35,7 +35,7 @@ export const metadata: Metadata = {
     title: "Prince Kumar | Java Backend Developer",
     description:
       "Portfolio of Prince Kumar, a Java Backend Developer skilled in Spring Boot and SQL.",
-    url: "https://princekumar.dev",
+    url: "https://prince-kumar-portfolio-five.vercel.app",
     siteName: "Prince Kumar Portfolio",
     locale: "en_IN",
     type: "website",

@@ -6,6 +6,6 @@ export default function robots(): MetadataRoute.Robots {
       userAgent: "*",
       allow: "/",
     },
-    sitemap: "https://princekumar.dev/sitemap.xml",
+    sitemap: "https://prince-kumar-portfolio-five.vercel.app/sitemap.xml",
   };
 }
