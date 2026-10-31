@@ -38,16 +38,15 @@ export default function Navbar() {
   }, []);
 
   return (
-    <header className="sticky top-0 z-40 border-b border-cobalt/40 bg-midnight/85 backdrop-blur-md">
+    <header className="sticky top-0 z-40 border-b border-white/[0.06] bg-midnight/85 backdrop-blur-md">
       <nav
         aria-label="Main navigation"
-        className="mx-auto flex max-w-5xl items-center justify-between px-4 py-2.5 pl-10 sm:pl-14 md:px-8 md:pl-20 lg:pl-24"
+        className="mx-auto flex max-w-5xl items-center justify-between px-4 py-3 pl-10 sm:pl-14 md:px-8 md:pl-20 lg:pl-24"
       >
-        {/* Brand Logo instead of text name */}
         <a
           href="#home"
           aria-label="Prince Kumar — Home"
-          className="group flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-xl transition-transform duration-150 hover:scale-105"
+          className="group flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-xl transition-transform duration-200 hover:scale-105"
         >
           <Image
             src={identity.logoPath}
@@ -59,7 +58,6 @@ export default function Navbar() {
           />
         </a>
 
-        {/* Navigation Links for Skills, Experience, Projects, Contact */}
         <ul className="no-scrollbar flex items-center gap-1 overflow-x-auto py-1 sm:gap-2">
           {NAV_LINKS.map((item) => {
             const isActive = activeId === item.id;
@@ -68,10 +66,10 @@ export default function Navbar() {
                 <a
                   href={`#${item.id}`}
                   aria-current={isActive ? "location" : undefined}
-                  className={`inline-flex min-h-[44px] items-center whitespace-nowrap rounded-lg px-2.5 py-1.5 text-xs font-medium transition-colors duration-150 sm:px-3.5 sm:text-sm ${
+                  className={`inline-flex min-h-[42px] items-center whitespace-nowrap rounded-lg px-3 py-1.5 font-display text-xs font-medium tracking-wide transition-all duration-200 sm:px-4 sm:text-sm ${
                     isActive
                       ? "bg-lime font-semibold text-midnight"
-                      : "text-mutedText hover:bg-surface hover:text-primaryText"
+                      : "text-mutedText hover:bg-white/[0.05] hover:text-primaryText"
                   }`}
                 >
                   {item.label}

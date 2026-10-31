@@ -13,11 +13,9 @@ export default function ContactSection() {
     "idle"
   );
 
-  // 1. PASTE YOUR WEB3FORMS ACCESS KEY HERE (from your Gmail):
   const WEB3FORMS_ACCESS_KEY = "6ef6e3b8-f0d4-4dff-bac7-e88f917f0510";
-
-  // 2. Replace with your Instagram username:
-  const instagramUrl = "https://www.instagram.com/thenameisprincekumar?psln=aWpjczM0Z2ZkOXZp";
+  const instagramUrl =
+    "https://www.instagram.com/thenameisprincekumar?psln=aWpjczM0Z2ZkOXZp";
   const whatsappUrl = `https://wa.me/${identity.phone.replace(/[^0-9]/g, "")}`;
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
@@ -62,25 +60,22 @@ export default function ContactSection() {
     <footer id="contact" className="py-14 sm:py-16 md:py-20">
       <StageHeader title={contact.heading} />
 
-      <div className="rounded-2xl border-2 border-cobalt bg-surface p-6 shadow-cobalt-glow sm:p-8 md:p-10">
+      <div className="rounded-2xl border border-white/[0.08] bg-surface p-6 shadow-card-subtle sm:p-8 md:p-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
-          {/* Left Column: Summary, Contact Details, Social Icons & Resume */}
+          {/* Left Column: Contact Details, Social Icons & Resume (Availability paragraph removed) */}
           <div className="flex flex-col justify-between lg:col-span-5">
             <div>
-              <h3 className="font-display text-[length:var(--step-h3)] font-bold text-primaryText">
+              <h3 className="font-display text-[length:var(--step-h3)] font-bold tracking-tight text-primaryText">
                 Get in Touch
               </h3>
-              <p className="mt-2.5 text-[length:var(--step-body)] leading-relaxed text-mutedText">
-                {contact.summary}
-              </p>
 
               {/* Direct Contact Info Cards */}
-              <div className="mt-6 space-y-3">
+              <div className="mt-5 space-y-3">
                 <a
                   href={`mailto:${identity.email}`}
-                  className="group flex items-center gap-3.5 rounded-xl border border-cobalt/50 bg-midnight p-3.5 transition-colors hover:border-lime"
+                  className="group flex items-center gap-3.5 rounded-xl border border-white/[0.07] bg-midnight p-3.5 transition-colors hover:border-lime/60"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-cobalt/50 bg-surface text-lime">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface text-lime">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -98,7 +93,7 @@ export default function ContactSection() {
                   </span>
                   <div className="min-w-0">
                     <span className="block text-xs text-mutedText">Email</span>
-                    <span className="block truncate text-sm font-semibold text-primaryText group-hover:text-lime">
+                    <span className="block truncate text-sm font-medium text-primaryText transition-colors group-hover:text-lime">
                       {identity.email}
                     </span>
                   </div>
@@ -106,9 +101,9 @@ export default function ContactSection() {
 
                 <a
                   href={`tel:${identity.phone.replace(/\s+/g, "")}`}
-                  className="group flex items-center gap-3.5 rounded-xl border border-cobalt/50 bg-midnight p-3.5 transition-colors hover:border-lime"
+                  className="group flex items-center gap-3.5 rounded-xl border border-white/[0.07] bg-midnight p-3.5 transition-colors hover:border-lime/60"
                 >
-                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg border border-cobalt/50 bg-surface text-lime">
+                  <span className="flex h-10 w-10 shrink-0 items-center justify-center rounded-lg bg-surface text-lime">
                     <svg
                       xmlns="http://www.w3.org/2000/svg"
                       viewBox="0 0 24 24"
@@ -125,7 +120,7 @@ export default function ContactSection() {
                   </span>
                   <div>
                     <span className="block text-xs text-mutedText">Phone</span>
-                    <span className="block text-sm font-semibold text-primaryText group-hover:text-lime">
+                    <span className="block text-sm font-medium text-primaryText transition-colors group-hover:text-lime">
                       {identity.phone}
                     </span>
                   </div>
@@ -134,20 +129,19 @@ export default function ContactSection() {
             </div>
 
             {/* Social Icons Bar: GitHub, LinkedIn, Instagram, WhatsApp & Resume */}
-            <div className="mt-8 border-t border-cobalt/40 pt-6">
-              <p className="text-xs font-semibold uppercase tracking-wider text-mutedText">
+            <div className="mt-8 pt-2">
+              <p className="font-display text-xs font-semibold uppercase tracking-wider text-mutedText">
                 Social Profiles
               </p>
 
               <div className="mt-3 flex flex-wrap items-center gap-3">
-                {/* GitHub Icon Button */}
                 <a
                   href={identity.github}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="GitHub"
                   title="GitHub"
-                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-cobalt/60 bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.08] bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -164,14 +158,13 @@ export default function ContactSection() {
                   </svg>
                 </a>
 
-                {/* LinkedIn Icon Button */}
                 <a
                   href={identity.linkedin}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="LinkedIn"
                   title="LinkedIn"
-                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-cobalt/60 bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.08] bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -184,14 +177,13 @@ export default function ContactSection() {
                   </svg>
                 </a>
 
-                {/* Instagram Icon Button */}
                 <a
                   href={instagramUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="Instagram"
                   title="Instagram"
-                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-cobalt/60 bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.08] bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -210,14 +202,13 @@ export default function ContactSection() {
                   </svg>
                 </a>
 
-                {/* WhatsApp Icon Button */}
                 <a
                   href={whatsappUrl}
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label="WhatsApp"
                   title="WhatsApp"
-                  className="flex h-12 w-12 items-center justify-center rounded-xl border border-cobalt/60 bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
+                  className="flex h-11 w-11 items-center justify-center rounded-xl border border-white/[0.08] bg-midnight text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -235,11 +226,10 @@ export default function ContactSection() {
                   </svg>
                 </a>
 
-                {/* Resume Download Button */}
                 <a
                   href={identity.resumePdfPath}
                   download
-                  className="inline-flex min-h-[48px] items-center justify-center rounded-xl border-2 border-cobalt bg-midnight px-4 py-2.5 font-display text-xs font-bold tracking-wide text-primaryText transition-transform duration-150 hover:-translate-y-0.5 hover:border-lime sm:text-sm"
+                  className="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-white/15 bg-midnight px-4 py-2 font-display text-xs font-semibold tracking-wide text-primaryText transition-all duration-150 hover:-translate-y-0.5 hover:border-lime hover:text-lime sm:text-sm"
                 >
                   Download Resume
                 </a>
@@ -251,9 +241,9 @@ export default function ContactSection() {
           <div className="lg:col-span-7">
             <form
               onSubmit={handleSubmit}
-              className="rounded-xl border border-cobalt/60 bg-midnight p-5 sm:p-7"
+              className="rounded-xl border border-white/[0.07] bg-midnight p-5 sm:p-7"
             >
-              <h3 className="font-display text-[length:var(--step-h3)] font-bold text-primaryText">
+              <h3 className="font-display text-[length:var(--step-h3)] font-bold tracking-tight text-primaryText">
                 Send a Message
               </h3>
 
@@ -261,7 +251,7 @@ export default function ContactSection() {
                 <div>
                   <label
                     htmlFor="contact-name"
-                    className="mb-1.5 block text-xs font-semibold text-mutedText"
+                    className="mb-1.5 block text-xs font-medium text-mutedText"
                   >
                     Name
                   </label>
@@ -273,14 +263,14 @@ export default function ContactSection() {
                     value={name}
                     onChange={(e) => setName(e.target.value)}
                     placeholder="Your name"
-                    className="w-full min-h-[44px] rounded-lg border border-cobalt/60 bg-surface px-3.5 py-2.5 text-sm text-primaryText placeholder:text-mutedText/50 focus:border-lime focus:outline-none"
+                    className="w-full min-h-[44px] rounded-lg border border-white/10 bg-surface px-3.5 py-2.5 text-sm text-primaryText placeholder:text-mutedText/50 transition-colors focus:border-lime focus:outline-none"
                   />
                 </div>
 
                 <div>
                   <label
                     htmlFor="contact-email"
-                    className="mb-1.5 block text-xs font-semibold text-mutedText"
+                    className="mb-1.5 block text-xs font-medium text-mutedText"
                   >
                     Email
                   </label>
@@ -292,7 +282,7 @@ export default function ContactSection() {
                     value={email}
                     onChange={(e) => setEmail(e.target.value)}
                     placeholder="you@example.com"
-                    className="w-full min-h-[44px] rounded-lg border border-cobalt/60 bg-surface px-3.5 py-2.5 text-sm text-primaryText placeholder:text-mutedText/50 focus:border-lime focus:outline-none"
+                    className="w-full min-h-[44px] rounded-lg border border-white/10 bg-surface px-3.5 py-2.5 text-sm text-primaryText placeholder:text-mutedText/50 transition-colors focus:border-lime focus:outline-none"
                   />
                 </div>
               </div>
@@ -300,7 +290,7 @@ export default function ContactSection() {
               <div className="mt-4">
                 <label
                   htmlFor="contact-message"
-                  className="mb-1.5 block text-xs font-semibold text-mutedText"
+                  className="mb-1.5 block text-xs font-medium text-mutedText"
                 >
                   Message
                 </label>
@@ -312,7 +302,7 @@ export default function ContactSection() {
                   value={message}
                   onChange={(e) => setMessage(e.target.value)}
                   placeholder="Write your message here..."
-                  className="w-full rounded-lg border border-cobalt/60 bg-surface px-3.5 py-2.5 text-sm text-primaryText placeholder:text-mutedText/50 focus:border-lime focus:outline-none"
+                  className="w-full rounded-lg border border-white/10 bg-surface px-3.5 py-2.5 text-sm text-primaryText placeholder:text-mutedText/50 transition-colors focus:border-lime focus:outline-none"
                 />
               </div>
 
@@ -320,7 +310,7 @@ export default function ContactSection() {
                 <button
                   type="submit"
                   disabled={status === "sending"}
-                  className="inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-lime px-6 py-3 font-display text-sm font-bold tracking-wide text-midnight transition-transform duration-150 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 sm:w-auto"
+                  className="inline-flex min-h-[48px] w-full items-center justify-center rounded-xl bg-lime px-6 py-3 font-display text-sm font-semibold tracking-wide text-midnight transition-transform duration-150 hover:-translate-y-0.5 active:translate-y-0 disabled:opacity-60 sm:w-auto"
                 >
                   {status === "sending" ? "Sending..." : "Send Message"}
                 </button>

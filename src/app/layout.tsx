@@ -1,25 +1,25 @@
 import type { Metadata } from "next";
-import { Space_Grotesk, Plus_Jakarta_Sans } from "next/font/google";
+import { Outfit, Inter } from "next/font/google";
 import "./globals.css";
 
-// Self-hosted display font for headings (zero layout shift)
-const spaceGrotesk = Space_Grotesk({
+// Executive, modern geometric display font for headings & interactive titles
+const outfit = Outfit({
   subsets: ["latin"],
-  weight: ["600", "700"],
-  variable: "--font-space-grotesk",
+  weight: ["500", "600", "700", "800"],
+  variable: "--font-outfit",
   display: "swap",
 });
 
-// Clean, easy-to-read sans-serif font for body and labels (no code/monospace look)
-const plusJakarta = Plus_Jakarta_Sans({
+// Ultra-clean, highly legible professional sans-serif for body copy & UI controls
+const inter = Inter({
   subsets: ["latin"],
-  weight: ["400", "500", "600", "700"],
-  variable: "--font-plus-jakarta",
+  weight: ["400", "500", "600"],
+  variable: "--font-inter",
   display: "swap",
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://prince-kumar-portfolio-five.vercel.app"), // Replace with your production domain
+  metadataBase: new URL("https://prince-kumar-portfolio-five.vercel.app"),
   title: "Prince Kumar | Java Backend Developer",
   description:
     "Portfolio of Prince Kumar, a Java Backend Developer skilled in Spring Boot and SQL.",
@@ -52,10 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html
-      lang="en"
-      className={`${spaceGrotesk.variable} ${plusJakarta.variable}`}
-    >
+    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
       <body className="font-sans antialiased selection:bg-lime selection:text-midnight">
         {children}
       </body>

@@ -2,11 +2,14 @@ interface StageHeaderProps {
   title: string;
 }
 
-// Plain heading with no numbers, slashes, brackets, or developer decorations
 export default function StageHeader({ title }: StageHeaderProps) {
   return (
-    <div className="mb-8 border-l-2 border-cobalt pl-4 md:pl-6">
-      <h2 className="font-display text-[length:var(--step-h2)] font-bold tracking-tight text-primaryText">
+    <div className="group mb-10 inline-flex items-center gap-3">
+      <span
+        aria-hidden="true"
+        className="h-2.5 w-2.5 rounded-full bg-lime transition-transform duration-300 group-hover:scale-125"
+      />
+      <h2 className="font-display text-[length:var(--step-h2)] font-bold tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
         {title}
       </h2>
     </div>

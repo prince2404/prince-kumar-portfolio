@@ -1,11 +1,13 @@
-import type { GalleryKey } from "./gallery";
+import type { StaticImageData } from "next/image";
+import askCover from "../../public/images/placeholders/ask-1.png";
+import microservicesCover from "../../public/images/placeholders/photo-1.jpg";
 
 export interface ProjectItem {
   id: string;
-  galleryKey: GalleryKey;
   title: string;
-  subtitle: string;
-  descriptionLines: string[];
+  image: StaticImageData | string;
+  imageAlt: string;
+  description: string;
   techStack: string[];
   liveUrl: string;
   githubUrl: string;
@@ -94,27 +96,22 @@ export const portfolioData = {
     items: [
       {
         id: "ask-healthcare",
-        galleryKey: "project-ask",
         title: "Apna Swasthya Kendra (ASK)",
-        subtitle: "Healthcare Retail Platform",
-        descriptionLines: [
-          "Built a multi-role platform using Spring Boot, Spring Security, and JPA/Hibernate, with Role-Based Access Control (RBAC) and Two-Factor Authentication (2FA) for Admin, Pharmacist, and Customer roles.",
-          "Designed a normalized relational schema and removed N+1 query problems in JPA/Hibernate.",
-        ],
+        image: askCover,
+        imageAlt: "Apna Swasthya Kendra Healthcare Retail Platform",
+        description:
+          "Built a multi-role healthcare retail platform using Spring Boot, Spring Security, and JPA/Hibernate with Role-Based Access Control (RBAC) and Two-Factor Authentication (2FA) for Admin, Pharmacist, and Customer roles, backed by a normalized relational schema that eliminates N+1 query issues.",
         techStack: ["Spring Boot", "Java", "Spring Security", "React", "MySQL"],
         liveUrl: "https://apna-sk.vercel.app/",
         githubUrl: "https://github.com/prince2404/APNA_SK",
       },
       {
         id: "spring-microservices",
-        galleryKey: "project-microservices",
         title: "Java Spring Microservices",
-        subtitle: "Distributed Microservices Ecosystem",
-        descriptionLines: [
-  "Built a microservices system with five Spring Boot services (API Gateway, Auth, Patient, Billing, Analytics), each in its own Docker container, run together with Docker Compose.",
-  "Implemented JWT authentication through a central API Gateway, and connected services using gRPC for synchronous calls and Kafka for asynchronous, event-driven communication.",
-  "Wrote unit tests with JUnit and integration tests with REST Assured, and wrote AWS infrastructure as Java CDK code (VPC, RDS, ECS Fargate, ALB) for cloud deployment.",
-],
+        image: microservicesCover,
+        imageAlt: "Java Spring Microservices Architecture",
+        description:
+          "Built a containerized microservices system with five Spring Boot services (API Gateway, Auth, Patient, Billing, Analytics) using Docker Compose, central JWT authentication, gRPC and Kafka communication, JUnit and REST Assured tests, and AWS CDK cloud infrastructure.",
         techStack: [
           "Java",
           "Spring Boot",
@@ -133,7 +130,5 @@ export const portfolioData = {
 
   contact: {
     heading: "Contact",
-    summary:
-      "Available for entry-level Java Backend Developer roles and software engineering opportunities. Send a direct message using the form or connect on social platforms.",
   },
 };
