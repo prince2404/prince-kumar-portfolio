@@ -3,14 +3,25 @@ interface StageHeaderProps {
 }
 
 export default function StageHeader({ title }: StageHeaderProps) {
+  const words = title.split(" ");
+  const firstWord = words[0];
+  const restWords = words.slice(1).join(" ");
+
   return (
-    <div className="group mb-10 inline-flex items-center gap-3">
-      <span
-        aria-hidden="true"
-        className="h-2.5 w-2.5 rounded-full bg-lime transition-transform duration-300 group-hover:scale-125"
-      />
-      <h2 className="font-display text-[length:var(--step-h2)] font-bold tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
-        {title}
+    <div className="group mb-10">
+      <h2 className="font-display font-extrabold uppercase tracking-tight leading-[1.1]">
+        <span
+          className="block text-[length:var(--step-stage)] text-primaryText transition-colors duration-200 group-hover:text-lime"
+        >
+          {firstWord}
+        </span>
+        {restWords && (
+          <span
+            className="block text-[length:var(--step-stage)] stage-muted-text transition-colors duration-200"
+          >
+            {restWords}
+          </span>
+        )}
       </h2>
     </div>
   );

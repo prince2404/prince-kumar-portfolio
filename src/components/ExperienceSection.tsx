@@ -8,14 +8,20 @@ export default function ExperienceSection() {
     <section id="experience" className="py-14 sm:py-16 md:py-20">
       <StageHeader title={experience.heading} />
 
-      <article className="group rounded-2xl border border-white/[0.08] bg-surface p-6 shadow-card-subtle transition-colors duration-200 hover:border-white/[0.15] sm:p-8">
+      <article className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-surface p-6 shadow-card-subtle transition-all duration-300 hover:border-lime/30 hover:shadow-lg hover:shadow-lime/[0.04] sm:p-8">
+        {/* Accent left border */}
+        <div
+          aria-hidden="true"
+          className="absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b from-lime via-lime/40 to-transparent transition-all duration-300 group-hover:via-lime"
+        />
+
         <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
           <div>
             <div className="flex flex-wrap items-center gap-3">
-              <h3 className="font-display text-[length:var(--step-h3)] font-semibold tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
+              <h3 className="font-display text-[length:var(--step-h3)] font-bold uppercase tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
                 {experience.role} — {experience.company}
               </h3>
-              <span className="rounded-md bg-lime px-2.5 py-0.5 font-display text-xs font-semibold text-midnight">
+              <span className="rounded-md bg-lime px-2.5 py-0.5 font-display text-xs font-semibold uppercase tracking-wider text-midnight">
                 {experience.teamSummary}
               </span>
             </div>

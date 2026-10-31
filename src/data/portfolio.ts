@@ -31,7 +31,7 @@ export const portfolioData = {
   },
 
   skills: {
-    heading: "Skills",
+    heading: "Technical Skills",
     groups: [
       {
         category: "Java & Core Programming",
@@ -78,7 +78,7 @@ export const portfolioData = {
   },
 
   experience: {
-    heading: "Experience",
+    heading: "Work Experience",
     role: "AI Intern",
     company: "Peepal Farm",
     period: "Jan 2025 – Mar 2025",
@@ -92,7 +92,7 @@ export const portfolioData = {
   },
 
   projects: {
-    heading: "Projects",
+    heading: "Recent Projects",
     items: [
       {
         id: "ask-healthcare",
@@ -129,6 +129,6 @@ export const portfolioData = {
   },
 
   contact: {
-    heading: "Contact",
+    heading: "Let's Connect",
   },
 };

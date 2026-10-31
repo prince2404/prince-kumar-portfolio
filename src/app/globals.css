@@ -12,6 +12,7 @@
 
   /* Fluid, balanced typographic scale */
   --step-hero: clamp(2.35rem, 4.2vw + 1rem, 4.25rem);
+  --step-stage: clamp(2.5rem, 5vw + 1rem, 5rem);
   --step-h2: clamp(1.65rem, 2.2vw + 0.85rem, 2.35rem);
   --step-h3: clamp(1.2rem, 1vw + 0.85rem, 1.45rem);
   --step-body: clamp(0.95rem, 0.3vw + 0.88rem, 1.05rem);
@@ -49,7 +50,7 @@ h1, h2, h3, h4 {
   outline-offset: 3px;
 }
 
-/* Clean, line-free ambient background (removed blue grid lines) */
+/* Clean, line-free ambient background */
 .bg-system-grid {
   background-color: var(--color-midnight);
   background-image: radial-gradient(
@@ -65,6 +66,15 @@ h1, h2, h3, h4 {
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+
+/* Muted solid text for the second word in section headers (reference style) */
+.stage-muted-text {
+  color: rgba(242, 245, 247, 0.18);
+}
+
+.group:hover .stage-muted-text {
+  color: rgba(212, 255, 36, 0.25);
 }
 
 @media (prefers-reduced-motion: reduce) {

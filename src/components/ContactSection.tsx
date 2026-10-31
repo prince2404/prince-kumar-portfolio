@@ -60,12 +60,12 @@ export default function ContactSection() {
     <footer id="contact" className="py-14 sm:py-16 md:py-20">
       <StageHeader title={contact.heading} />
 
-      <div className="rounded-2xl border border-white/[0.08] bg-surface p-6 shadow-card-subtle sm:p-8 md:p-10">
+      <div className="rounded-2xl border border-white/[0.08] bg-surface p-6 shadow-card-subtle transition-all duration-300 hover:border-lime/30 hover:shadow-lg hover:shadow-lime/[0.04] sm:p-8 md:p-10">
         <div className="grid grid-cols-1 gap-10 lg:grid-cols-12 lg:gap-12">
           {/* Left Column: Contact Details, Social Icons & Resume (Availability paragraph removed) */}
           <div className="flex flex-col justify-between lg:col-span-5">
             <div>
-              <h3 className="font-display text-[length:var(--step-h3)] font-bold tracking-tight text-primaryText">
+              <h3 className="font-display text-[length:var(--step-h3)] font-bold uppercase tracking-wider text-primaryText">
                 Get in Touch
               </h3>
 
@@ -130,7 +130,7 @@ export default function ContactSection() {
 
             {/* Social Icons Bar: GitHub, LinkedIn, Instagram, WhatsApp & Resume */}
             <div className="mt-8 pt-2">
-              <p className="font-display text-xs font-semibold uppercase tracking-wider text-mutedText">
+              <p className="font-display text-xs font-bold uppercase tracking-[0.15em] text-mutedText">
                 Social Profiles
               </p>
 
@@ -243,7 +243,7 @@ export default function ContactSection() {
               onSubmit={handleSubmit}
               className="rounded-xl border border-white/[0.07] bg-midnight p-5 sm:p-7"
             >
-              <h3 className="font-display text-[length:var(--step-h3)] font-bold tracking-tight text-primaryText">
+              <h3 className="font-display text-[length:var(--step-h3)] font-bold uppercase tracking-wider text-primaryText">
                 Send a Message
               </h3>
 
