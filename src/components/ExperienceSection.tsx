@@ -8,46 +8,23 @@ export default function ExperienceSection() {
     <section id="experience" className="py-14 sm:py-16 md:py-20">
       <StageHeader title={experience.heading} />
 
-      <article className="group relative overflow-hidden rounded-2xl border border-white/[0.08] bg-surface p-6 shadow-card-subtle transition-all duration-300 hover:border-lime/30 hover:shadow-lg hover:shadow-lime/[0.04] sm:p-8">
-        {/* Accent left border */}
-        <div
-          aria-hidden="true"
-          className="absolute inset-y-0 left-0 w-[3px] bg-gradient-to-b from-lime via-lime/40 to-transparent transition-all duration-300 group-hover:via-lime"
-        />
+      <div className="mt-2 space-y-10 sm:space-y-12">
+        {experience.entries.map((entry, idx) => (
+          <article key={idx} className="space-y-3">
+            <h3 className="font-display text-lg font-bold tracking-tight text-primaryText sm:text-xl">
+              {entry.company}
+            </h3>
 
-        <div className="flex flex-col justify-between gap-3 sm:flex-row sm:items-center">
-          <div>
-            <div className="flex flex-wrap items-center gap-3">
-              <h3 className="font-display text-[length:var(--step-h3)] font-bold uppercase tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
-                {experience.role} — {experience.company}
-              </h3>
-              <span className="rounded-md bg-lime px-2.5 py-0.5 font-display text-xs font-semibold uppercase tracking-wider text-midnight">
-                {experience.teamSummary}
-              </span>
-            </div>
-            <p className="mt-1 text-[length:var(--step-meta)] text-mutedText">
-              {experience.location}
+            <p className="text-[length:var(--step-body)] leading-relaxed text-mutedText">
+              {entry.description}
             </p>
-          </div>
 
-          <div className="text-left sm:text-right">
-            <span className="inline-block rounded-lg border border-white/[0.08] bg-midnight px-3.5 py-1.5 font-display text-xs font-medium text-mutedText">
-              {experience.period}
-            </span>
-          </div>
-        </div>
-
-        <ul className="mt-6 space-y-3.5">
-          {experience.bullets.map((bullet, idx) => (
-            <li key={idx} className="flex items-start gap-3.5">
-              <span className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-lime" />
-              <span className="text-[length:var(--step-body)] leading-relaxed text-mutedText">
-                {bullet}
-              </span>
-            </li>
-          ))}
-        </ul>
-      </article>
+            <p className="text-sm text-mutedText/60">
+              {entry.period}
+            </p>
+          </article>
+        ))}
+      </div>
     </section>
   );
 }

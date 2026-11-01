@@ -62,7 +62,7 @@ export default function HeroSection() {
           <div className="mt-8 flex flex-wrap items-center justify-center gap-4 md:justify-start">
             <a
               href="#projects"
-              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-lime px-6 py-3 font-display text-sm font-semibold tracking-wide text-midnight transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-lime/20 active:translate-y-0"
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-lime px-6 py-3 text-sm font-semibold tracking-wide text-midnight transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-lime/20 active:translate-y-0"
             >
               View Projects
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">
@@ -73,7 +73,7 @@ export default function HeroSection() {
             <a
               href={identity.resumePdfPath}
               download
-              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-white/15 bg-surface px-6 py-3 font-display text-sm font-semibold tracking-wide text-primaryText transition-all duration-200 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
+              className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-white/15 bg-surface px-6 py-3 text-sm font-semibold tracking-wide text-primaryText transition-all duration-200 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
             >
               Download Resume
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden="true">

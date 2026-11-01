@@ -18,7 +18,7 @@ const config: Config = {
       },
       fontFamily: {
         display: ["var(--font-outfit)", "sans-serif"],
-        sans: ["var(--font-inter)", "sans-serif"],
+        sans: ["var(--font-dm)", "sans-serif"],
       },
       boxShadow: {
         "card-subtle": "0 8px 30px -6px rgba(0, 0, 0, 0.5)",

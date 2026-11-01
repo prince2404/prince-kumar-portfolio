@@ -31,13 +31,16 @@ body {
   background-color: var(--color-midnight);
   color: var(--color-text-main);
   font-size: var(--step-body);
-  line-height: 1.7;
-  letter-spacing: -0.01em;
+  line-height: 1.75;
+  letter-spacing: 0.012em;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
 h1, h2, h3, h4 {
-  letter-spacing: -0.025em;
+  letter-spacing: -0.01em;
 }
 
 ::selection {
@@ -50,7 +53,7 @@ h1, h2, h3, h4 {
   outline-offset: 3px;
 }
 
-/* Clean, line-free ambient background */
+/* Original clean, single-tone ambient background */
 .bg-system-grid {
   background-color: var(--color-midnight);
   background-image: radial-gradient(

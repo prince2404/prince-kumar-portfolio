@@ -79,15 +79,13 @@ export const portfolioData = {
 
   experience: {
     heading: "Work Experience",
-    role: "AI Intern",
-    company: "Peepal Farm",
-    period: "Jan 2025 – Mar 2025",
-    location: "Himachal Pradesh, India",
-    teamSummary: "Team of 3",
-    bullets: [
-      "Built a RAG chatbot prototype with a team of 3 to answer Peepal Farm's common queries on animal care, adoption, and veganism using the NGO's own documents.",
-      "Learned the RAG flow independently: embeddings, a vector database (ChromaDB), and LangChain with an LLM, all in Python.",
-      "Identified hallucination issues during testing and learned why better retrieval and fine-tuning are needed for accurate answers.",
+    entries: [
+      {
+        company: "Peepal Farm",
+        description:
+          "Built a RAG chatbot prototype with a team of 3 to answer common queries on animal care, adoption, and veganism using the NGO's own documents, learning the full RAG flow — embeddings, ChromaDB, and LangChain — independently.",
+        period: "Jan 2025 – Mar 2025",
+      },
     ],
   },
 

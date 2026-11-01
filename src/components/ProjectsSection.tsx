@@ -64,7 +64,7 @@ export default function ProjectsSection() {
                   href={project.liveUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="group/btn inline-flex min-h-[42px] items-center justify-center gap-1.5 rounded-xl bg-lime px-4 py-2 font-display text-xs font-semibold tracking-wide text-midnight transition-transform duration-150 hover:-translate-y-0.5"
+                  className="group/btn inline-flex min-h-[42px] items-center justify-center gap-1.5 rounded-xl bg-lime px-4 py-2 text-xs font-semibold tracking-wide text-midnight transition-transform duration-150 hover:-translate-y-0.5"
                 >
                   Live
                   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-3.5 w-3.5 transition-transform duration-150 group-hover/btn:-translate-y-0.5 group-hover/btn:translate-x-0.5" aria-hidden="true">
@@ -75,7 +75,7 @@ export default function ProjectsSection() {
                   href={project.githubUrl}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex min-h-[42px] items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-midnight px-4 py-2 font-display text-xs font-semibold tracking-wide text-primaryText transition-colors duration-150 hover:border-lime hover:text-lime"
+                  className="inline-flex min-h-[42px] items-center justify-center gap-1.5 rounded-xl border border-white/15 bg-midnight px-4 py-2 text-xs font-semibold tracking-wide text-primaryText transition-colors duration-150 hover:border-lime hover:text-lime"
                 >
                   GitHub
                 </a>

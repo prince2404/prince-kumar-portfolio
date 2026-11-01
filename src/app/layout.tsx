@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Outfit, Inter } from "next/font/google";
+import { Outfit, DM_Sans } from "next/font/google";
 import "./globals.css";
 
-// Executive, modern geometric display font for headings & interactive titles
+// Executive, modern geometric display font for headings & titles (Outfit)
 const outfit = Outfit({
   subsets: ["latin"],
   weight: ["500", "600", "700", "800"],
@@ -10,11 +10,11 @@ const outfit = Outfit({
   display: "swap",
 });
 
-// Ultra-clean, highly legible professional sans-serif for body copy & UI controls
-const inter = Inter({
+// Clean, simple, readable sans-serif with natural character spacing (DM Sans)
+const dmSans = DM_Sans({
   subsets: ["latin"],
-  weight: ["400", "500", "600"],
-  variable: "--font-inter",
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-dm",
   display: "swap",
 });
 
@@ -52,7 +52,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={`${outfit.variable} ${inter.variable}`}>
+    <html lang="en" className={`${outfit.variable} ${dmSans.variable}`}>
       <body className="font-sans antialiased selection:bg-lime selection:text-midnight">
         {children}
       </body>

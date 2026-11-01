@@ -46,7 +46,7 @@ export default function Navbar() {
         <a
           href="#home"
           aria-label="Prince Kumar — Home"
-          className="group flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-xl transition-transform duration-200 hover:scale-105"
+          className="flex min-h-[44px] min-w-[44px] shrink-0 items-center justify-center rounded-xl"
         >
           <Image
             src={identity.logoPath}
@@ -66,10 +66,10 @@ export default function Navbar() {
                 <a
                   href={`#${item.id}`}
                   aria-current={isActive ? "location" : undefined}
-                  className={`inline-flex min-h-[42px] items-center whitespace-nowrap rounded-lg px-3 py-1.5 font-display text-xs font-medium tracking-wide transition-all duration-200 sm:px-4 sm:text-sm ${
+                  className={`inline-flex min-h-[40px] items-center whitespace-nowrap rounded-lg px-3 py-1.5 text-xs font-medium sm:px-4 sm:text-sm ${
                     isActive
                       ? "bg-lime font-semibold text-midnight"
-                      : "text-mutedText hover:bg-white/[0.05] hover:text-primaryText"
+                      : "text-mutedText hover:text-primaryText"
                   }`}
                 >
                   {item.label}
