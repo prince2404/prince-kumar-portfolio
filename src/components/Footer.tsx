@@ -8,7 +8,7 @@ export default function Footer() {
   const whatsappUrl = `https://wa.me/${identity.phone.replace(/[^0-9]/g, "")}`;
 
   return (
-    <footer className="mx-auto max-w-5xl px-4 pl-10 sm:pl-14 md:px-8 md:pl-20 lg:pl-24">
+    <footer className="mx-auto max-w-5xl px-4 sm:px-6 md:px-8">
       {/* Social Links Bar */}
       <div className="rounded-2xl border border-lime/30 bg-surface p-6 sm:p-8">
         <h3 className="font-display text-lg font-bold uppercase tracking-wider text-primaryText sm:text-xl">
