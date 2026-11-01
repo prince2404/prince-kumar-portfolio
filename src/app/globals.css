@@ -7,16 +7,16 @@
   --color-surface: #090D16;
   --color-cobalt: #1558C9;
   --color-lime: #D4FF24;
-  --color-text-main: #F2F5F7;
-  --color-text-muted: #94A3B8;
+  --color-text-main: #FFFFFF;
+  --color-text-muted: #9E9EA4;
 
-  /* Fluid, balanced typographic scale */
-  --step-hero: clamp(2.35rem, 4.2vw + 1rem, 4.25rem);
-  --step-stage: clamp(2.5rem, 5vw + 1rem, 5rem);
+  /* Fluid typographic scale tuned for Poppins (matches Framer reference hierarchy) */
+  --step-hero: clamp(2.5rem, 4.8vw + 1rem, 4.5rem);
+  --step-stage: clamp(2.35rem, 4.8vw + 0.9rem, 4.5rem);
   --step-h2: clamp(1.65rem, 2.2vw + 0.85rem, 2.35rem);
-  --step-h3: clamp(1.2rem, 1vw + 0.85rem, 1.45rem);
-  --step-body: clamp(0.95rem, 0.3vw + 0.88rem, 1.05rem);
-  --step-meta: clamp(0.8rem, 0.2vw + 0.75rem, 0.875rem);
+  --step-h3: clamp(1.25rem, 1vw + 0.9rem, 1.55rem);
+  --step-body: clamp(1rem, 0.35vw + 0.92rem, 1.125rem);
+  --step-meta: clamp(0.875rem, 0.2vw + 0.82rem, 0.95rem);
 }
 
 html {
@@ -31,16 +31,21 @@ body {
   background-color: var(--color-midnight);
   color: var(--color-text-main);
   font-size: var(--step-body);
-  line-height: 1.75;
-  letter-spacing: 0.012em;
+  font-weight: 400;
+  line-height: 1.68;
+  letter-spacing: -0.005em;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
   overflow-x: hidden;
 }
 
-h1, h2, h3, h4 {
-  letter-spacing: -0.01em;
+h1, h2 {
+  letter-spacing: -0.025em;
+}
+
+h3, h4 {
+  letter-spacing: -0.015em;
 }
 
 ::selection {
@@ -53,7 +58,7 @@ h1, h2, h3, h4 {
   outline-offset: 3px;
 }
 
-/* Original clean, single-tone ambient background */
+/* Clean ambient background */
 .bg-system-grid {
   background-color: var(--color-midnight);
   background-image: radial-gradient(
@@ -71,13 +76,13 @@ h1, h2, h3, h4 {
   scrollbar-width: none;
 }
 
-/* Muted solid text for the second word in section headers (reference style) */
+/* Muted solid text for the second word in section headers (Framer reference style) */
 .stage-muted-text {
-  color: rgba(242, 245, 247, 0.18);
+  color: rgba(255, 255, 255, 0.22);
 }
 
 .group:hover .stage-muted-text {
-  color: rgba(212, 255, 36, 0.25);
+  color: rgba(212, 255, 36, 0.28);
 }
 
 @media (prefers-reduced-motion: reduce) {

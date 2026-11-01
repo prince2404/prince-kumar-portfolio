@@ -17,13 +17,16 @@ export default function SkillsSection() {
             {/* Decorative index number */}
             <span
               aria-hidden="true"
-              className="absolute -right-2 -top-4 font-display text-7xl font-extrabold text-white/[0.03] transition-colors duration-300 group-hover:text-lime/[0.06]"
+              className="
+                absolute -right-2 -top-4 font-display text-7xl font-bold text-white/[0.03]
+                transition-colors duration-300 group-hover:text-lime/[0.06]
+              "
             >
               {String(idx + 1).padStart(2, "0")}
             </span>
 
             <div className="relative">
-              <h3 className="font-display text-[length:var(--step-h3)] font-bold uppercase tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
+              <h3 className="font-display text-[length:var(--step-h3)] font-semibold tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
                 {group.category}
               </h3>
 

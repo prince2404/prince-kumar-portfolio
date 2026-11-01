@@ -13,31 +13,29 @@ export default function ProjectsSection() {
         {projects.items.map((project) => (
           <article
             key={project.id}
-            className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-white/[0.08] bg-surface shadow-card-subtle transition-all duration-300 hover:-translate-y-1 hover:border-lime/30 hover:shadow-lg hover:shadow-lime/[0.04]"
+            className="group flex flex-col justify-between overflow-hidden rounded-2xl border border-white/[0.08] bg-surface shadow-card-subtle transition-all duration-300 hover:-translate-y-0.5 hover:border-white/[0.15]"
           >
             <div>
-              {/* Project image with hover zoom */}
-              <div className="relative aspect-[16/9] w-full overflow-hidden bg-midnight">
+              {/* Static project cover image (non-clickable, non-zoomable) */}
+              <div className="relative aspect-[16/9] w-full overflow-hidden bg-midnight pointer-events-none select-none">
                 <Image
                   src={project.image}
                   alt={project.imageAlt}
                   fill
                   quality={85}
                   sizes="(max-width: 768px) 92vw, 480px"
-                  className="object-cover object-top transition-transform duration-500 group-hover:scale-105"
+                  className="object-cover object-top"
                   draggable={false}
                 />
-                {/* Overlay gradient on hover */}
-                <div className="absolute inset-0 bg-gradient-to-t from-surface/80 via-transparent to-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
               </div>
 
               {/* Project Name & Description */}
               <div className="p-6 pb-0 sm:p-7 sm:pb-0">
-                <h3 className="font-display text-[length:var(--step-h3)] font-bold uppercase tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
+                <h3 className="font-display text-[length:var(--step-h3)] font-semibold tracking-tight text-primaryText transition-colors duration-200 group-hover:text-lime">
                   {project.title}
                 </h3>
 
-                <p className="mt-3 text-sm leading-relaxed text-mutedText sm:text-[0.95rem]">
+                <p className="mt-3 text-[length:var(--step-body)] font-normal leading-relaxed text-mutedText">
                   {project.description}
                 </p>
               </div>
@@ -52,7 +50,7 @@ export default function ProjectsSection() {
                 {project.techStack.map((tech) => (
                   <li
                     key={tech}
-                    className="rounded-md border border-white/[0.07] bg-midnight/90 px-2.5 py-1 text-xs font-medium text-mutedText transition-colors duration-150 hover:border-lime/40 hover:text-primaryText"
+                    className="rounded-md border border-white/[0.07] bg-midnight/90 px-2.5 py-1 text-xs font-medium text-mutedText"
                   >
                     {tech}
                   </li>

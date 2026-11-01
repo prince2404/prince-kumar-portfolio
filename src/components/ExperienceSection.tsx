@@ -10,16 +10,16 @@ export default function ExperienceSection() {
 
       <div className="mt-2 space-y-10 sm:space-y-12">
         {experience.entries.map((entry, idx) => (
-          <article key={idx} className="space-y-3">
-            <h3 className="font-display text-lg font-bold tracking-tight text-primaryText sm:text-xl">
+          <article key={idx} className="space-y-3.5">
+            <h3 className="font-display text-[length:var(--step-h3)] font-semibold tracking-tight text-primaryText">
               {entry.company}
             </h3>
 
-            <p className="text-[length:var(--step-body)] leading-relaxed text-mutedText">
+            <p className="max-w-3xl text-[length:var(--step-body)] font-normal leading-relaxed text-mutedText">
               {entry.description}
             </p>
 
-            <p className="text-sm text-mutedText/60">
+            <p className="pt-0.5 text-[length:var(--step-meta)] font-normal text-mutedText">
               {entry.period}
             </p>
           </article>
