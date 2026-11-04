@@ -110,7 +110,7 @@ export const portfolioData = {
       {
         company: "Peepal Farm",
         description:
-          "Built a RAG chatbot prototype with a team of 3 to answer common queries on animal care, adoption, and veganism using the NGO's own documents, learning the full RAG flow — embeddings, ChromaDB, and LangChain — independently.",
+          "Built a RAG chatbot prototype with a team of 3 to answer Peepal Farm’s common queries on animal care, adoption, and veganism using the NGO’s own documents. The bot finds the most relevant information from those documents and uses it to write clear, helpful answers for people looking for guidance.",
         period: "Jan 2025 – Mar 2025",
       },
     ],
@@ -125,7 +125,7 @@ export const portfolioData = {
         image: askCover,
         imageAlt: "Apna Swasthya Kendra Healthcare Retail Platform",
         description:
-          "Built a multi-role healthcare retail platform using Spring Boot, Spring Security, and JPA/Hibernate with Role-Based Access Control (RBAC) and Two-Factor Authentication (2FA) for Admin, Pharmacist, and Customer roles, backed by a normalized relational schema that eliminates N+1 query issues.",
+          "A healthcare retail platform where admins, pharmacists, and customers each log in securely and see only what their role allows. Data is organized in a clean structure, so the app stays fast and reliable.",
         techStack: ["Spring Boot", "Java", "Spring Security", "React", "MySQL"],
         liveUrl: "https://apna-sk.vercel.app/",
         githubUrl: "https://github.com/prince2404/APNA_SK",
@@ -136,7 +136,7 @@ export const portfolioData = {
         image: microservicesCover,
         imageAlt: "Java Spring Microservices Architecture",
         description:
-          "Built a containerized microservices system with five Spring Boot services (API Gateway, Auth, Patient, Billing, Analytics) using Docker Compose, central JWT authentication, gRPC and Kafka communication, JUnit and REST Assured tests, and AWS CDK cloud infrastructure.",
+          "A microservices project where the application is split into five independent services, each with its own job, such as login, billing, and analytics. All requests go through one gateway.",
         techStack: [
           "Java",
           "Spring Boot",
