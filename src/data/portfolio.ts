@@ -2,6 +2,24 @@ import type { StaticImageData } from "next/image";
 import askCover from "../../public/images/placeholders/ask-1.png";
 import microservicesCover from "../../public/images/placeholders/photo-1.jpg";
 
+export type ToolIconId =
+  | "java"
+  | "spring"
+  | "sql"
+  | "docker"
+  | "git"
+  | "github"
+  | "junit"
+  | "github-actions"
+  | "aws"
+  | "vercel";
+
+export interface MainToolItem {
+  id: ToolIconId;
+  name: string;
+  category: string;
+}
+
 export interface ProjectItem {
   id: string;
   title: string;
@@ -31,50 +49,59 @@ export const portfolioData = {
   },
 
   skills: {
-    heading: "Technical Skills",
-    groups: [
+    heading: "Main Tools",
+    tools: [
       {
-        category: "Java & Core Programming",
-        items: [
-          "Java 17+",
-          "Core Java",
-          "OOPs",
-          "Collections",
-          "Multithreading",
-          "Streams API",
-          "Data Structures & Algorithms",
-        ],
+        id: "java",
+        name: "Java",
+        category: "Programming language",
       },
       {
-        category: "Spring & Backend Development",
-        items: [
-          "Spring Boot",
-          "Spring Security",
-          "Spring Data JPA",
-          "Hibernate",
-          "REST APIs",
-          "Microservices",
-          "System Design",
-          "Design Patterns",
-        ],
+        id: "spring",
+        name: "Spring Boot",
+        category: "Java framework",
       },
       {
-        category: "Databases, Cloud & DevOps",
-        items: [
-          "SQL",
-          "Git",
-          "Maven",
-          "Docker",
-          "CI/CD",
-          "Github Actions",
-          "AWS",
-        ],
+        id: "sql",
+        name: "SQL",
+        category: "Database language",
       },
       {
-        category: "Testing & Code Quality",
-        items: ["Junit", "AI-Assisted Coding", "Debugging"],
+        id: "docker",
+        name: "Docker",
+        category: "Container platform",
       },
-    ],
+      {
+        id: "git",
+        name: "Git",
+        category: "Version control",
+      },
+      {
+        id: "github",
+        name: "GitHub",
+        category: "Code hosting",
+      },
+      {
+        id: "junit",
+        name: "JUnit",
+        category: "Testing framework",
+      },
+      {
+        id: "github-actions",
+        name: "GitHub Actions",
+        category: "CI/CD automation",
+      },
+      {
+        id: "aws",
+        name: "AWS",
+        category: "Cloud platform",
+      },
+      {
+        id: "vercel",
+        name: "Vercel",
+        category: "Hosting platform",
+      },
+    ] as MainToolItem[],
   },
 
   experience: {
@@ -83,7 +110,7 @@ export const portfolioData = {
       {
         company: "Peepal Farm",
         description:
-          "Built a RAG chatbot prototype with a team of 3 to answer Peepal Farm’s common queries on animal care, adoption, and veganism using the NGO’s own documents. The bot finds the most relevant information from those documents and uses it to write clear, helpful answers for people looking for guidance.",
+          "Built a RAG chatbot prototype with a team of 3 to answer common queries on animal care, adoption, and veganism using the NGO's own documents, learning the full RAG flow — embeddings, ChromaDB, and LangChain — independently.",
         period: "Jan 2025 – Mar 2025",
       },
     ],
@@ -98,7 +125,7 @@ export const portfolioData = {
         image: askCover,
         imageAlt: "Apna Swasthya Kendra Healthcare Retail Platform",
         description:
-          "A healthcare retail platform where admins, pharmacists, and customers each log in securely and see only what their role allows. Data is organized in a clean structure, so the app stays fast and reliable.",
+          "Built a multi-role healthcare retail platform using Spring Boot, Spring Security, and JPA/Hibernate with Role-Based Access Control (RBAC) and Two-Factor Authentication (2FA) for Admin, Pharmacist, and Customer roles, backed by a normalized relational schema that eliminates N+1 query issues.",
         techStack: ["Spring Boot", "Java", "Spring Security", "React", "MySQL"],
         liveUrl: "https://apna-sk.vercel.app/",
         githubUrl: "https://github.com/prince2404/APNA_SK",
@@ -109,7 +136,7 @@ export const portfolioData = {
         image: microservicesCover,
         imageAlt: "Java Spring Microservices Architecture",
         description:
-          "A microservices project where the application is split into five independent services, each with its own job, such as login, billing, and analytics. All requests go through one gateway, and the whole system starts together with a single command.",
+          "Built a containerized microservices system with five Spring Boot services (API Gateway, Auth, Patient, Billing, Analytics) using Docker Compose, central JWT authentication, gRPC and Kafka communication, JUnit and REST Assured tests, and AWS CDK cloud infrastructure.",
         techStack: [
           "Java",
           "Spring Boot",

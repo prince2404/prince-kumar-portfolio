@@ -12,7 +12,7 @@ export default function Footer() {
       {/* Social Links Bar */}
       <div className="rounded-2xl border border-lime/30 bg-surface p-6 sm:p-8">
         <h3 className="font-display text-lg font-bold uppercase tracking-wider text-primaryText sm:text-xl">
-          Let&apos;s Do This
+          Elsewhere on the web
         </h3>
 
         <div className="mt-5 flex flex-wrap items-center gap-3">
@@ -127,14 +127,13 @@ export default function Footer() {
       </div>
 
       {/* Bottom copyright bar */}
-      <div className="border-t border-white/[0.06] py-8 mt-6">
+      <div className="mt-6 border-t border-white/[0.06] py-8">
         <div className="flex flex-col items-center justify-between gap-4 sm:flex-row">
           <p className="text-xs font-medium uppercase tracking-[0.15em] text-mutedText/60">
             © {currentYear} {identity.name}. All rights reserved.
           </p>
           <p className="text-xs font-medium text-mutedText/40">
-            Designed & Built with{" "}
-            <span className="text-lime">♥</span>
+            Designed & Built with <span className="text-lime">♥</span>
           </p>
         </div>
       </div>

@@ -9,39 +9,46 @@ export default function HeroSection() {
     <section
       id="home"
       aria-label="Hero"
-      className="relative flex min-h-[calc(100vh-72px)] flex-col justify-center py-14 sm:py-16 md:py-20"
+      className="relative flex min-h-[calc(100vh-72px)] flex-col justify-center py-12 sm:py-16 md:py-20"
     >
       <div className="flex flex-col items-center justify-between gap-10 md:flex-row md:gap-12 lg:gap-16">
-        {/* Photo of Prince: First on mobile (order-1), Right side on desktop (md:order-2) */}
+        {/* Portrait Card with Cream Top-Left Backing & Acid Lime Right Circle (matches Modern Portfolio Portrait Card.png) */}
         <div className="order-1 shrink-0 md:order-2">
-          <div className="relative mx-auto w-44 sm:w-52 md:w-64 lg:w-72">
-            <div className="relative aspect-[12/13] overflow-hidden rounded-2xl border border-white/10 bg-surface shadow-card-subtle">
+          <div className="relative mx-auto w-52 sm:w-60 md:w-68 lg:w-76 py-3 px-4">
+            {/* Top-left off-white/cream rounded backing shape */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute left-0 top-0 h-[48%] w-[62%] rounded-tl-[32px] rounded-tr-[18px] rounded-bl-[36px] bg-[#F8F2E3] sm:rounded-tl-[38px] sm:rounded-bl-[42px]"
+            />
+
+            {/* Bottom-right acid-lime circular accent */}
+            <div
+              aria-hidden="true"
+              className="pointer-events-none absolute -right-1.5 bottom-[16%] aspect-square h-[36%] rounded-full bg-lime sm:-right-2.5"
+            />
+
+            {/* Main rounded portrait frame */}
+            <div className="relative z-10 aspect-[4/5] overflow-hidden rounded-[26px] border border-white/15 bg-surface shadow-card-subtle sm:rounded-[30px]">
               <Image
                 src={identity.photoPath}
                 alt={identity.photoAlt}
-                width={480}
-                height={520}
+                width={600}
+                height={750}
                 priority
-                sizes="(max-width: 640px) 176px, (max-width: 768px) 208px, (max-width: 1024px) 256px, 288px"
+                sizes="(max-width: 640px) 208px, (max-width: 768px) 240px, (max-width: 1024px) 272px, 304px"
                 className="h-full w-full object-cover object-[center_top]"
               />
             </div>
-            <span
-              aria-hidden="true"
-              className="absolute -bottom-1.5 -right-1.5 h-4 w-4 rounded-full border-2 border-midnight bg-lime"
-            />
           </div>
         </div>
 
         {/* Text Content */}
         <div className="order-2 flex-1 text-center md:order-1 md:text-left">
-          {/* Two-tone uppercase name */}
-          <h1 className="font-display font-extrabold uppercase tracking-tight leading-[1.05]">
-            <span className="block text-[length:var(--step-hero)] text-primaryText">
-              {nameParts[0]}
-            </span>
+          {/* Single-line two-tone uppercase name on mobile and desktop */}
+          <h1 className="whitespace-nowrap font-display text-[clamp(1.75rem,6.2vw,4.1rem)] font-extrabold uppercase leading-[1.08] tracking-tight">
+            <span className="text-primaryText">{nameParts[0]}</span>
             {nameParts.length > 1 && (
-              <span className="block text-[length:var(--step-hero)] stage-muted-text">
+              <span className="ml-2.5 stage-muted-text sm:ml-3.5">
                 {nameParts.slice(1).join(" ")}
               </span>
             )}
@@ -65,8 +72,18 @@ export default function HeroSection() {
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl bg-lime px-6 py-3 text-sm font-semibold tracking-wide text-midnight transition-all duration-200 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-lime/20 active:translate-y-0"
             >
               View Projects
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5" aria-hidden="true">
-                <path fillRule="evenodd" d="M3 10a.75.75 0 0 1 .75-.75h10.638l-3.22-3.22a.75.75 0 1 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H3.75A.75.75 0 0 1 3 10Z" clipRule="evenodd" />
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5"
+                aria-hidden="true"
+              >
+                <path
+                  fillRule="evenodd"
+                  d="M3 10a.75.75 0 0 1 .75-.75h10.638l-3.22-3.22a.75.75 0 1 1 1.06-1.06l4.5 4.5a.75.75 0 0 1 0 1.06l-4.5 4.5a.75.75 0 1 1-1.06-1.06l3.22-3.22H3.75A.75.75 0 0 1 3 10Z"
+                  clipRule="evenodd"
+                />
               </svg>
             </a>
 
@@ -76,7 +93,13 @@ export default function HeroSection() {
               className="group inline-flex min-h-[48px] items-center justify-center gap-2 rounded-xl border border-white/15 bg-surface px-6 py-3 text-sm font-semibold tracking-wide text-primaryText transition-all duration-200 hover:-translate-y-0.5 hover:border-lime hover:text-lime"
             >
               Download Resume
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" className="h-4 w-4 transition-transform duration-200 group-hover:translate-y-0.5" aria-hidden="true">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 20 20"
+                fill="currentColor"
+                className="h-4 w-4 transition-transform duration-200 group-hover:translate-y-0.5"
+                aria-hidden="true"
+              >
                 <path d="M10.75 2.75a.75.75 0 0 0-1.5 0v8.614L6.295 8.235a.75.75 0 1 0-1.09 1.03l4.25 4.5a.75.75 0 0 0 1.09 0l4.25-4.5a.75.75 0 0 0-1.09-1.03l-2.955 3.129V2.75Z" />
                 <path d="M3.5 12.75a.75.75 0 0 0-1.5 0v2.5A2.75 2.75 0 0 0 4.75 18h10.5A2.75 2.75 0 0 0 18 15.25v-2.5a.75.75 0 0 0-1.5 0v2.5c0 .69-.56 1.25-1.25 1.25H4.75c-.69 0-1.25-.56-1.25-1.25v-2.5Z" />
               </svg>
